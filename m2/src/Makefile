@@ -89,7 +89,7 @@ DEPS = $(SOURCES:.c=.d)
 
 #Compile object file without Linking
 %.o : %.c
-	$(CC) -c $< $(CFLAGS) -o $@
+	$(CC) -MMD -c $< $(CFLAGS) -o $@
 
 #Compile preprocessing file stop after preprocessing
 %.i : %.c
